@@ -94,6 +94,8 @@ public class _10020ProvingYourselfToOutremus extends QuestHandler {
 						case STEP_TO_1: {
 							return defaultCloseDialog(env, 0, 1); // 1
 						}
+					default:
+						break;
 					}
 					break;
 				}
@@ -113,6 +115,8 @@ public class _10020ProvingYourselfToOutremus extends QuestHandler {
 						case STEP_TO_5: {
 							return defaultCloseDialog(env, 4, 5); // 5
 						}
+					default:
+						break;
 					}
 					break;
 				}
@@ -131,6 +135,8 @@ public class _10020ProvingYourselfToOutremus extends QuestHandler {
 								}
 							}
 						}
+					default:
+						break;
 					}
 					break;
 				}
@@ -149,6 +155,8 @@ public class _10020ProvingYourselfToOutremus extends QuestHandler {
 								}
 							}
 						}
+					default:
+						break;
 					}
 					break;
 				}
@@ -167,6 +175,8 @@ public class _10020ProvingYourselfToOutremus extends QuestHandler {
 								}
 							}
 						}
+					default:
+						break;
 					}
 					break;
 				}
@@ -186,6 +196,8 @@ public class _10020ProvingYourselfToOutremus extends QuestHandler {
 						case SET_REWARD: {
 							return defaultCloseDialog(env, 10, 10, true, false, 0, 0, 182206301, 1); // reward
 						}
+					default:
+						break;
 					}
 					break;
 				}
@@ -199,6 +211,8 @@ public class _10020ProvingYourselfToOutremus extends QuestHandler {
 						case STEP_TO_7: {
 							return defaultCloseDialog(env, 6, 7); // 7
 						}
+					default:
+						break;
 					}
 					break;
 				}

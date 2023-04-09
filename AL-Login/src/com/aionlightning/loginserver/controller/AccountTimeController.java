@@ -17,7 +17,7 @@
 package com.aionlightning.loginserver.controller;
 
 import java.sql.Timestamp;
-import com.aionlightning.commons.database.dao.DAOManager;
+import com.aionemu.commons.database.dao.DAOManager;
 import com.aionlightning.loginserver.dao.AccountTimeDAO;
 import com.aionlightning.loginserver.model.Account;
 import com.aionlightning.loginserver.model.AccountTime;

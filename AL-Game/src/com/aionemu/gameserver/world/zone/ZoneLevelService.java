@@ -88,7 +88,7 @@ public class ZoneLevelService {
 				// TODO retail emotion, attack_status packets sending
 				if (!player.getLifeStats().isAlreadyDead()) {
 					if (!player.isInvul()) {
-						player.getLifeStats().reduceHp(value, null);
+						player.getLifeStats().reduceHp(value, player);
 						player.getLifeStats().sendHpPacketUpdate();
 					}
 				}

@@ -23,7 +23,7 @@ import java.lang.management.ThreadInfo;
 import java.lang.management.ThreadMXBean;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import com.aionlightning.commons.utils.ExitCode;
+import com.aionemu.commons.utils.ExitCode;
 
 /**
  * @author -Nemesiss-

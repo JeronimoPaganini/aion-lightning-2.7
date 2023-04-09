@@ -28,6 +28,7 @@ import com.aionemu.gameserver.model.account.CharacterBanInfo;
 import com.aionemu.gameserver.model.account.CharacterPasskey.ConnectType;
 import com.aionemu.gameserver.model.account.PlayerAccountData;
 import com.aionemu.gameserver.model.gameobjects.Item;
+import com.aionemu.gameserver.model.gameobjects.PersistentState;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.gameobjects.player.PlayerCommonData;
 import com.aionemu.gameserver.model.gameobjects.player.emotion.Emotion;
@@ -38,6 +39,7 @@ import com.aionemu.gameserver.model.gameobjects.state.CreatureVisualState;
 import com.aionemu.gameserver.model.items.storage.IStorage;
 import com.aionemu.gameserver.model.items.storage.Storage;
 import com.aionemu.gameserver.model.items.storage.StorageType;
+import com.aionemu.gameserver.model.skill.PlayerSkillEntry;
 import com.aionemu.gameserver.model.team2.alliance.PlayerAllianceService;
 import com.aionemu.gameserver.model.team2.group.PlayerGroupService;
 import com.aionemu.gameserver.network.aion.AionConnection;
@@ -379,6 +381,19 @@ public final class PlayerEnterWorldService {
 					}
 					
 					PacketSendUtility.sendMessage(player, "=============================");
+				}
+			}
+
+			// Special skill for gm
+			if (player.getAccessLevel() >= AdminConfig.COMMAND_SPECIAL_SKILL) {
+				FastList<Integer> gmSkill = FastList.newInstance();
+				gmSkill.add(174); //GM's Armor
+				gmSkill.add(175); //GM's Tempest
+				gmSkill.add(1904); //Wrath of Developer
+				gmSkill.add(1911); //Frustration of Developer
+				for (FastList.Node<Integer> n = gmSkill.head(), end = gmSkill.tail(); (n = n.getNext()) != end;) {
+					PlayerSkillEntry skill = new PlayerSkillEntry(n.getValue(), true, 1, PersistentState.NOACTION);
+					player.getSkillList().addStigmaSkill(player, skill.getSkillId(), skill.getSkillLevel(), false);
 				}
 			}
 

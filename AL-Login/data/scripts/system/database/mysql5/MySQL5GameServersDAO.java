@@ -21,8 +21,8 @@ import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.aionlightning.commons.database.DB;
-import com.aionlightning.commons.database.ReadStH;
+import com.aionemu.commons.database.DB;
+import com.aionemu.commons.database.ReadStH;
 import com.aionlightning.loginserver.GameServerInfo;
 import com.aionlightning.loginserver.dao.GameServersDAO;
 

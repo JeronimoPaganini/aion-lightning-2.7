@@ -27,12 +27,28 @@ public class Util {
 	 * @param s
 	 */
 	public static void printSection(String s) {
-		s = "[ " + s + " ]";
+		if (!s.isEmpty())
+			s = "[ " + s + " ]";
 
-		while (s.length() < 79)
+		while (s.length() < 79) {
 			s = "=" + s + "=";
+		}
 
+		System.out.println("");
 		System.out.println(s);
+		System.out.println("");
+	}
+
+	public static void printSsSection(String s) {
+		s = "( " + s + " )";
+
+		while (s.length() < 79) {
+			s = "-" + s + "-";
+		}
+
+		System.out.println("");
+		System.out.println(s);
+		System.out.println("");
 	}
 
 	public static void printProgressBarHeader(int size) {
@@ -51,6 +67,12 @@ public class Util {
 
 	public static void printEndProgress() {
 		System.out.print(" Done. \n");
+	}
+
+	public static void printRotatingBarHeader(int dataSize) {
+		String anim = "|/-\\";
+		System.out.print("\r" + anim.charAt(Math.round(dataSize / 50) % anim.length()) + " Processing data : " + dataSize + " data" + (dataSize <= 1 ? "." : "s.                 "));
+		System.out.print("\r");
 	}
 
 	/**
@@ -88,8 +110,29 @@ public class Util {
 	}
 
 	/**
-	 * Gets last <tt>cnt</tt> read bytes from the <tt>data</tt> buffer and puts into <tt>result</tt> buffer in special
-	 * format:
+	 * Convert data from given ByteBuffer to hex
+	 *
+	 * @param data
+	 * @return hex
+	 */
+	public static String toHexStream(ByteBuffer data) {
+		StringBuilder result = new StringBuilder();
+		int counter = 0;
+		int b;
+		while (data.hasRemaining()) {
+			b = data.get() & 0xff;
+			result.append(String.format("%02X ", b));
+
+			counter++;
+			if (counter % 16 == 0) {
+				result.append("\n");
+			}
+		}
+		return result.toString();
+	}
+
+	/**
+	 * Gets last <tt>cnt</tt> read bytes from the <tt>data</tt> buffer and puts into <tt>result</tt> buffer in special format:
 	 * <ul>
 	 * <li>if byte represents char from partition 0x1F to 0x80 (which are normal ascii chars) then it's put into buffer as
 	 * it is</li>

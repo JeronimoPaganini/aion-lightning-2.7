@@ -138,7 +138,6 @@ public class AnnouncementService {
 		return DAOManager.getDAO(AnnouncementsDAO.class);
 	}
 
-	@SuppressWarnings("synthetic-access")
 	private static class SingletonHolder {
 
 		protected static final AnnouncementService instance = new AnnouncementService();

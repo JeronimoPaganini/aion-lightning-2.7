@@ -112,6 +112,8 @@ public class _1052RootoftheRot extends QuestHandler {
 						return true;
 					}
 					return false;
+			default:
+				break;
 			}
 		}
 		else if (targetId == 730026) {
@@ -127,6 +129,8 @@ public class _1052RootoftheRot extends QuestHandler {
 						return true;
 					}
 					return false;
+			default:
+				break;
 			}
 		}
 		return false;

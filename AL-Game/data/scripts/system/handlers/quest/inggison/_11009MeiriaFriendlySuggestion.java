@@ -87,6 +87,8 @@ public class _11009MeiriaFriendlySuggestion extends QuestHandler {
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 							return true;
 						}
+					default:
+						break;
 					}
 				}
 				case 799017: {
@@ -102,6 +104,8 @@ public class _11009MeiriaFriendlySuggestion extends QuestHandler {
 							if (giveQuestItem(env, 182206712, 1))
 								return true;
 						}
+					default:
+						break;
 					}
 				}
 				case 798941: {
@@ -117,6 +121,8 @@ public class _11009MeiriaFriendlySuggestion extends QuestHandler {
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 							return true;
 						}
+					default:
+						break;
 					}
 				}
 			}

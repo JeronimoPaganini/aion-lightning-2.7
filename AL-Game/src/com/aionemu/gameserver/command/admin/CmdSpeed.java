@@ -63,6 +63,8 @@ public class CmdSpeed extends BaseCommand implements StatOwner {
                 case FLY_SPEED:
                     stat.setBase(flyspeed + (flyspeed * modifier) / 100);
                     break;
+			default:
+				break;
             }
         }
 

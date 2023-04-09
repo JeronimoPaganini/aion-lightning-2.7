@@ -67,13 +67,11 @@ public class _80033EventAvertingTheGaze extends QuestHandler {
 						return sendQuestDialog(env, 2375);
 					else
 						return sendQuestDialog(env, 2716);
-				}
-				else if (env.getDialog() == QuestDialog.SELECT_REWARD) {
+				} else if (env.getDialog() == QuestDialog.SELECT_REWARD) {
 					if (qs.getQuestVarById(0) == 0)
 						defaultCloseDialog(env, 0, 1, true, true, 0, 0, 164002015, 1);
 					return sendQuestDialog(env, 5);
-				}
-				else if (env.getDialog() == QuestDialog.SELECT_NO_REWARD)
+				} else if (env.getDialog() == QuestDialog.SELECT_NO_REWARD)
 					return sendQuestRewardDialog(env, 799781, 5);
 				else
 					return sendQuestStartDialog(env);

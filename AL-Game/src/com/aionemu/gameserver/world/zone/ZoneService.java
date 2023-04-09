@@ -63,7 +63,6 @@ public final class ZoneService implements GameEngine {
 		return SingletonHolder.instance;
 	}
 
-	@SuppressWarnings("synthetic-access")
 	private static class SingletonHolder {
 		protected static final ZoneService instance = new ZoneService();
 	}
@@ -94,21 +93,24 @@ public final class ZoneService implements GameEngine {
 	public final void addZoneHandlerClass(Class<? extends ZoneHandler> handler) {
 		ZoneNameAnnotation idAnnotation = handler.getAnnotation(ZoneNameAnnotation.class);
 		if (idAnnotation != null) {
-				String[] zoneNames = idAnnotation.value().split(" ");
-				for (String zoneNameString : zoneNames){
-					try {
-						ZoneName zoneName = ZoneName.valueOf(zoneNameString.trim());
-						handlers.put(zoneName, handler);
+			String[] zoneNames = idAnnotation.value().split(" ");
+			for (String zoneNameString : zoneNames) {
+				try {
+					ZoneName zoneName = ZoneName.get(zoneNameString.trim());
+					if (zoneName == ZoneName.get("NONE")) {
+						throw new RuntimeException();
 					}
-					catch (Exception e) {
-						log.warn("Missing ZoneName: " + idAnnotation.value());
-					}
+					handlers.put(zoneName, handler);
+				} 
+				catch (Exception e) {
+					log.warn("Missing ZoneName: " + idAnnotation.value());
 				}
+			}
 		}
 	}
 
 	public final void addZoneHandlerClass(ZoneName zoneName, Class<? extends ZoneHandler> handler) {
-			handlers.put(zoneName, handler);
+		handlers.put(zoneName, handler);
 	}
 
 	@Override
@@ -124,6 +126,7 @@ public final class ZoneService implements GameEngine {
 
 		try {
 			scriptManager.load(ZONE_DESCRIPTOR_FILE);
+			log.info("Loaded " + handlers.size() + " zone handlers.");
 		}
 		catch (IllegalStateException e){
 			log.warn("Can't initialize instance handlers.", e.getMessage());

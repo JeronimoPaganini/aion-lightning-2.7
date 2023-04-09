@@ -59,18 +59,20 @@ public class _80008PieceOfCake extends QuestHandler {
 		if (qs.getStatus() == QuestStatus.START) {
 			if (env.getTargetId() == 798415) {
 				switch (env.getDialog()) {
-					case START_DIALOG:
-						if (var == 0)
-							return sendQuestDialog(env, 2375);
-					case SELECT_REWARD:
-						removeQuestItem(env, 182214006, 1);
-						return defaultCloseDialog(env, 0, 1, true, true);
+				case START_DIALOG:
+					if (var == 0)
+						return sendQuestDialog(env, 2375);
+				case SELECT_REWARD:
+					removeQuestItem(env, 182214006, 1);
+					return defaultCloseDialog(env, 0, 1, true, true);
+				default:
+					break;
 				}
 			}
 		}
 		return sendQuestRewardDialog(env, 798415, 0);
 	}
-	
+
 	@Override
 	public boolean onLvlUpEvent(QuestEnv env) {
 		Player player = env.getPlayer();

@@ -38,6 +38,7 @@ import com.aionemu.gameserver.model.account.Account;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.Crypt;
 import com.aionemu.gameserver.network.PacketFloodFilter;
+import com.aionemu.gameserver.network.PacketLoggerService;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_KEY;
 import com.aionemu.gameserver.network.factories.AionPacketHandlerFactory;
 import com.aionemu.gameserver.network.loginserver.LoginServer;
@@ -225,7 +226,9 @@ public class AionConnection extends AConnection {
 					}
 				}
 			}
-			
+
+			PacketLoggerService.getInstance().logPacketCM(pck.getPacketName());
+
 			if(pck.read())
 				packetProcessor.executePacket(pck);
 		}

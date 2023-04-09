@@ -58,8 +58,8 @@ public class _80039EventTheChosenFew extends QuestHandler {
 		if (qs == null || qs.getStatus() == QuestStatus.NONE)
 			return false;
 
-		if (qs.getStatus() == QuestStatus.START || qs.getStatus() == QuestStatus.COMPLETE
-			&& QuestService.collectItemCheck(env, false)) {
+		if (qs.getStatus() == QuestStatus.START
+				|| qs.getStatus() == QuestStatus.COMPLETE && QuestService.collectItemCheck(env, false)) {
 			if (targetId == 799780) {
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 					return sendQuestDialog(env, 1011);
@@ -72,8 +72,7 @@ public class _80039EventTheChosenFew extends QuestHandler {
 				else
 					return sendQuestStartDialog(env);
 			}
-		}
-		else if (qs.getStatus() == QuestStatus.REWARD) {
+		} else if (qs.getStatus() == QuestStatus.REWARD) {
 			if (env.getDialog() == QuestDialog.USE_OBJECT)
 				return sendQuestDialog(env, 5);
 			return sendQuestEndDialog(env);

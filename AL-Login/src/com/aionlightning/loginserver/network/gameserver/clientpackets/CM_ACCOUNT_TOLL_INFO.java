@@ -16,7 +16,7 @@
  */
 package com.aionlightning.loginserver.network.gameserver.clientpackets;
 
-import com.aionlightning.commons.database.dao.DAOManager;
+import com.aionemu.commons.database.dao.DAOManager;
 import com.aionlightning.loginserver.dao.AccountDAO;
 import com.aionlightning.loginserver.dao.PremiumDAO;
 import com.aionlightning.loginserver.model.Account;

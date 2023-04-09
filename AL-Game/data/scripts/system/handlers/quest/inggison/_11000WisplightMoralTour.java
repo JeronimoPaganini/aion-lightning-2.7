@@ -81,6 +81,8 @@ public class _11000WisplightMoralTour extends QuestHandler {
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 							return true;
 						}
+					default:
+						break;
 					}
 				}
 				case 798934: {
@@ -94,6 +96,8 @@ public class _11000WisplightMoralTour extends QuestHandler {
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 							return true;
 						}
+					default:
+						break;
 					}
 				}
 				case 798933: {
@@ -107,6 +111,8 @@ public class _11000WisplightMoralTour extends QuestHandler {
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 							return true;
 						}
+					default:
+						break;
 					}
 				}
 				case 798927: {

@@ -18,7 +18,7 @@ package com.aionlightning.loginserver.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import com.aionlightning.commons.database.dao.DAOManager;
+import com.aionemu.commons.database.dao.DAOManager;
 import com.aionlightning.loginserver.GameServerInfo;
 import com.aionlightning.loginserver.GameServerTable;
 import com.aionlightning.loginserver.dao.PremiumDAO;

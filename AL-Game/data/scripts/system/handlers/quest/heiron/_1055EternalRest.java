@@ -98,6 +98,8 @@ public class _1055EternalRest extends QuestHandler {
 						return true;
 					}
 					return false;
+			default:
+				break;
 			}
 		}
 		else if (targetId == 204625) { // Kacias
@@ -134,6 +136,8 @@ public class _1055EternalRest extends QuestHandler {
 						return true;
 					}
 					return false;
+			default:
+				break;
 			}
 		}
 		else if (targetId == 204628) { // Kalkas
@@ -155,6 +159,8 @@ public class _1055EternalRest extends QuestHandler {
 					}
 					else
 						return closeDialogWindow(env);
+			default:
+				break;
 			}
 		}
 		else if (targetId == 204627) { // Mempion
@@ -176,6 +182,8 @@ public class _1055EternalRest extends QuestHandler {
 					}
 					else
 						return closeDialogWindow(env);
+			default:
+				break;
 			}
 		}
 		else if (targetId == 204626) { // Spina
@@ -197,6 +205,8 @@ public class _1055EternalRest extends QuestHandler {
 					}
 					else
 						return closeDialogWindow(env);
+			default:
+				break;
 			}
 		}
 		else if (targetId == 204622) { // Ladon
@@ -218,6 +228,8 @@ public class _1055EternalRest extends QuestHandler {
 					}
 					else
 						return closeDialogWindow(env);
+			default:
+				break;
 			}
 		}
 		else if (targetId == 700270) { // Empty Stone Coffin / Cercueil de pierre vide

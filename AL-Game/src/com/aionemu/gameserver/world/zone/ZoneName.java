@@ -1276,7 +1276,8 @@ public enum ZoneName {
 	CORE2_400010000,
 
 	// Siege weapon use area
-	_ABYSS_CASTLE_AREA_, NONE;
+	_ABYSS_CASTLE_AREA_, 
+	NONE;
 	
 	private static final FastMap<String, ZoneName> zoneNames = new FastMap<String, ZoneName>();
 

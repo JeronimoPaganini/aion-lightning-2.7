@@ -19,7 +19,7 @@ package com.aionlightning.loginserver.network.aion;
 import java.nio.ByteBuffer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import com.aionlightning.commons.network.packet.BaseClientPacket;
+import com.aionemu.commons.network.packet.BaseClientPacket;
 import com.aionlightning.loginserver.model.Account;
 
 /**

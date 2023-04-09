@@ -85,6 +85,8 @@ public class _11008LetterOfEncouragement extends QuestHandler {
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 							return true;
 						}
+					default:
+						break;
 					}
 				}
 				case 798997: {

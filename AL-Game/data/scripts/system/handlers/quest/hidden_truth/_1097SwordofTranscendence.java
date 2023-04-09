@@ -71,6 +71,8 @@ public class _1097SwordofTranscendence extends QuestHandler {
 								PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 								return true;
 							}
+					default:
+						break;
 					}
 				}
 					break;
@@ -86,6 +88,8 @@ public class _1097SwordofTranscendence extends QuestHandler {
 								PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 								return true;
 							}
+					default:
+						break;
 					}
 				}
 					break;
@@ -111,6 +115,8 @@ public class _1097SwordofTranscendence extends QuestHandler {
 								else
 									return sendQuestDialog(env, 10001);
 							}
+					default:
+						break;
 					}
 				}
 					break;

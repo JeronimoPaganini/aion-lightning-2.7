@@ -103,6 +103,8 @@ public class _1094ProjectDrakanhammer extends QuestHandler {
 						PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 						return true;
 					}
+			default:
+				break;
 			}
 		}
 		else if (targetId == 798155) {
@@ -120,6 +122,8 @@ public class _1094ProjectDrakanhammer extends QuestHandler {
 						PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 						return true;
 					}
+			default:
+				break;
 			}
 		}
 		else if (targetId == 700411) {
@@ -129,6 +133,8 @@ public class _1094ProjectDrakanhammer extends QuestHandler {
 						giveQuestItem(env, 182208017, 1);
 						return false;
 					}
+			default:
+				break;
 			}
 		}
 		else if (targetId == 730153) {
@@ -140,6 +146,8 @@ public class _1094ProjectDrakanhammer extends QuestHandler {
 						updateQuestStatus(env);
 						return false;
 					}
+			default:
+				break;
 			}
 		}
 		return false;

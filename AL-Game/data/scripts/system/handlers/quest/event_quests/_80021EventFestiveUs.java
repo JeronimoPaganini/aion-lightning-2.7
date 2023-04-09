@@ -59,8 +59,8 @@ public class _80021EventFestiveUs extends QuestHandler {
 
 		QuestTemplate template = DataManager.QUEST_DATA.getQuestById(env.getQuestId());
 
-		if (qs == null || qs.getStatus() == QuestStatus.NONE || qs.getStatus() == QuestStatus.COMPLETE
-			&& qs.getCompleteCount() < template.getMaxRepeatCount()) {
+		if (qs == null || qs.getStatus() == QuestStatus.NONE
+				|| qs.getStatus() == QuestStatus.COMPLETE && qs.getCompleteCount() < template.getMaxRepeatCount()) {
 			if (env.getTargetId() == 799784) {
 				if (env.getDialog() == QuestDialog.USE_OBJECT || env.getDialog() == QuestDialog.START_DIALOG)
 					return sendQuestDialog(env, 1011);
@@ -79,32 +79,26 @@ public class _80021EventFestiveUs extends QuestHandler {
 				else if (env.getDialog() == QuestDialog.STEP_TO_1) {
 					defaultCloseDialog(env, 0, 1, 182214015, 2, 182214014, 1);
 					return true;
-				}
-				else
+				} else
 					return sendQuestStartDialog(env);
-			}
-			else if (env.getTargetId() == 203618 && var == 1) {
+			} else if (env.getTargetId() == 203618 && var == 1) {
 				if (env.getDialog() == QuestDialog.USE_OBJECT || env.getDialog() == QuestDialog.START_DIALOG)
 					return sendQuestDialog(env, 1693);
 				else if (env.getDialog() == QuestDialog.SELECT_ACTION_1694) {
 					sendEmotion(env, (Creature) env.getVisibleObject(), EmotionId.NO, true);
 					return sendQuestDialog(env, 1694);
-				}
-				else if (env.getDialog() == QuestDialog.STEP_TO_2) {
+				} else if (env.getDialog() == QuestDialog.STEP_TO_2) {
 					defaultCloseDialog(env, 1, 2, 0, 0, 182214015, 1);
 					return true;
-				}
-				else
+				} else
 					return sendQuestStartDialog(env);
-			}
-			else if (env.getTargetId() == 203650 && var == 2) {
+			} else if (env.getTargetId() == 203650 && var == 2) {
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 					return sendQuestDialog(env, 2034);
 				else if (env.getDialog() == QuestDialog.SELECT_ACTION_2035) {
 					sendEmotion(env, (Creature) env.getVisibleObject(), EmotionId.PANIC, true);
 					return sendQuestDialog(env, 2035);
-				}
-				else if (env.getDialog() == QuestDialog.STEP_TO_3)
+				} else if (env.getDialog() == QuestDialog.STEP_TO_3)
 					return defaultCloseDialog(env, 2, 3, true, false, 0, 0, 0, 182214015, 1);
 				else
 					return sendQuestStartDialog(env);
@@ -121,8 +115,7 @@ public class _80021EventFestiveUs extends QuestHandler {
 
 		if (EventService.getInstance().checkQuestIsActive(questId)) {
 			return QuestService.checkLevelRequirement(questId, player.getCommonData().getLevel());
-		}
-		else if (qs != null) {
+		} else if (qs != null) {
 			// Set as expired
 			QuestService.abandonQuest(player, questId);
 		}

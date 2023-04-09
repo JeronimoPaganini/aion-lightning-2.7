@@ -16,7 +16,7 @@
  */
 package com.aionlightning.loginserver.taskmanager.trigger.implementations;
 
-import com.aionlightning.commons.network.util.ThreadPoolManager;
+import com.aionemu.commons.network.util.ThreadPoolManager;
 import com.aionlightning.loginserver.taskmanager.trigger.TaskFromDBTrigger;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

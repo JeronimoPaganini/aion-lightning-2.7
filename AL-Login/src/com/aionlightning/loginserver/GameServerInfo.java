@@ -19,7 +19,7 @@ package com.aionlightning.loginserver;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import com.aionlightning.commons.network.IPRange;
+import com.aionemu.commons.network.IPRange;
 import com.aionlightning.loginserver.model.Account;
 import com.aionlightning.loginserver.network.gameserver.GsConnection;
 import com.aionlightning.loginserver.network.gameserver.GsConnection.State;

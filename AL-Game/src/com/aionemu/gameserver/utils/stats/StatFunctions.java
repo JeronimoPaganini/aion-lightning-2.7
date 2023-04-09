@@ -407,6 +407,8 @@ public class StatFunctions {
 					break;
 				case PERCENT:
 					resultDamage += baseDamage * skillDamages / 100f;
+			default:
+				break;
 			}
 		}
 		//add bonus damage
@@ -853,6 +855,8 @@ public class StatFunctions {
 					case ELEMENTAL_RESISTANCE_LIGHT:
 					case PHYSICAL_DEFENSE:
 						return value * 0.8f;
+				default:
+					break;
 				}
 				break;
 			case 6:
@@ -864,6 +868,8 @@ public class StatFunctions {
 						return value * 0.3f;
 					case SPEED:
 						return value * 0.8f;
+				default:
+					break;
 				}
 				break;
 			case 5:
@@ -877,6 +883,8 @@ public class StatFunctions {
 						return value * 0.3f;
 					case SPEED:
 						return value * 0.6f;
+				default:
+					break;
 				}
 				break;
 		}

@@ -19,7 +19,7 @@ package com.aionlightning.loginserver;
 import java.io.IOException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import com.aionlightning.commons.database.dao.DAOManager;
+import com.aionemu.commons.database.dao.DAOManager;
 import com.aionlightning.loginserver.configs.Config;
 import com.aionlightning.loginserver.configs.SvStatsConfig;
 import com.aionlightning.loginserver.dao.SvStatsDAO;

@@ -16,8 +16,8 @@
  */
 package com.aionlightning.loginserver.network;
 
-import com.aionlightning.commons.network.NioServer;
-import com.aionlightning.commons.network.ServerCfg;
+import com.aionemu.commons.network.NioServer;
+import com.aionemu.commons.network.ServerCfg;
 import com.aionlightning.loginserver.configs.Config;
 import com.aionlightning.loginserver.network.aion.AionConnectionFactoryImpl;
 import com.aionlightning.loginserver.network.gameserver.GsConnectionFactoryImpl;

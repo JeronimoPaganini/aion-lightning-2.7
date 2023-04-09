@@ -16,7 +16,7 @@
  */
 package com.aionlightning.loginserver.dao;
 
-import com.aionlightning.commons.database.dao.DAO;
+import com.aionemu.commons.database.dao.DAO;
 import com.aionlightning.loginserver.model.AccountTime;
 
 /**

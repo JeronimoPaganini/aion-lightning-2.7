@@ -22,7 +22,7 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.aionlightning.commons.network.IPRange;
+import com.aionemu.commons.network.IPRange;
 import com.aionlightning.loginserver.GameServerTable;
 import com.aionlightning.loginserver.network.gameserver.GsAuthResponse;
 import com.aionlightning.loginserver.network.gameserver.GsClientPacket;

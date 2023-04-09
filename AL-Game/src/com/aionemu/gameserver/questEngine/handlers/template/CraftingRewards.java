@@ -101,6 +101,8 @@ public class CraftingRewards extends QuestHandler {
 						}
 						return sendQuestEndDialog(env);
 					}
+				default:
+					break;
 				}
 			}
 		}

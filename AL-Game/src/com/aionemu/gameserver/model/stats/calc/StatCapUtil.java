@@ -67,6 +67,8 @@ public class StatCapUtil {
 				lowerCap = 0;
 				upperCap = Integer.MAX_VALUE;
 				break;
+		default:
+			break;
 		}
 		calculate(stat, lowerCap, upperCap);
 	}

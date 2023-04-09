@@ -91,6 +91,8 @@ public class RelicRewards extends QuestHandler {
 						else
 							return sendQuestDialog(env, 3398);
 					}
+				default:
+					break;
 				}
 			}
 		}
@@ -144,6 +146,8 @@ public class RelicRewards extends QuestHandler {
 						}
 						else
 							return sendQuestDialog(env, 1009);
+				default:
+					break;
 				}
 			}
 		}
@@ -164,6 +168,8 @@ public class RelicRewards extends QuestHandler {
 						QuestService.finishQuest(env, qs.getQuestVars().getQuestVars() - 1);
 						PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 						return true;
+				default:
+					break;
 				}
 			}
 		}

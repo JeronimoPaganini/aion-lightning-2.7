@@ -81,7 +81,6 @@ public class DebugService {
 		}
 	}
 
-	@SuppressWarnings("synthetic-access")
 	private static class SingletonHolder {
 
 		protected static final DebugService instance = new DebugService();

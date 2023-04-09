@@ -16,6 +16,7 @@ import com.aionemu.gameserver.ai2.handler.ShoutEventHandler;
 import com.aionemu.gameserver.ai2.poll.AIQuestion;
 import com.aionemu.gameserver.configs.main.CustomConfig;
 import com.aionemu.gameserver.controllers.attack.AttackStatus;
+import com.aionemu.gameserver.configs.main.SecurityConfig;
 import com.aionemu.gameserver.controllers.observer.StartMovingListener;
 import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.model.DescriptionId;
@@ -120,6 +121,10 @@ public class Skill {
 		this(skillTemplate, effector, effector.getSkillList().getSkillLevel(skillTemplate.getSkillId()), firstTarget, null);
 	}
 
+	public Skill(SkillTemplate skillTemplate, Player effector, Creature firstTarget, int skillLevel) {
+		this(skillTemplate, effector, skillLevel, firstTarget, null);
+	}
+
 	/**
 	 * @param skillTemplate
 	 * @param effector
@@ -205,15 +210,29 @@ public class Skill {
 	 * @return true if usage is successfull
 	 */
 	public boolean useSkill() {
-		if (!canUseSkill())
+		return useSkill(true, true);
+	}
+
+	public boolean useNoAnimationSkill() {
+		return useSkill(false, true);
+	}
+
+	public boolean useWithoutPropSkill() {
+		return useSkill(false, false);
+	}
+
+	private boolean useSkill(boolean checkAnimation, boolean checkproperties) {
+		if (checkproperties && !canUseSkill())
 			return false;
 
 		calculateSkillDuration();
 
-		// must be after calculateskillduration
-		if (!checkAnimationTime()) {
-			log.debug("check animation time failed");
-			return false;
+		if (SecurityConfig.MOTION_TIME) {
+			// must be after calculateskillduration
+			if (checkAnimation && !checkAnimationTime()) {
+				log.debug("check animation time failed");
+				return false;
+			}
 		}
 
 		boostSkillCost = 0;

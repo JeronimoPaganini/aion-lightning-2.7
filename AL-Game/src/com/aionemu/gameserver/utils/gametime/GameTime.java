@@ -19,6 +19,7 @@ package com.aionemu.gameserver.utils.gametime;
 import java.security.InvalidParameterException;
 
 import com.aionemu.gameserver.spawnengine.DayTimeSpawnEngine;
+import com.aionemu.gameserver.spawnengine.TemporarySpawnEngine;
 
 /**
  * Represents the internal clock for the time in aion world
@@ -107,6 +108,7 @@ public class GameTime {
 	public void checkDayTimeChange() {
 		DayTime oldDayTime = this.dayTime;
 		calculateDayTime();
+		onHourChange();
 		if (oldDayTime != this.dayTime) {
 			onDayTimeChange();
 		}
@@ -125,6 +127,10 @@ public class GameTime {
 			dayTime = DayTime.AFTERNOON;
 		else
 			dayTime = DayTime.MORNING;
+	}
+
+	private void onHourChange() {
+		TemporarySpawnEngine.onHourChange();
 	}
 
 	/**

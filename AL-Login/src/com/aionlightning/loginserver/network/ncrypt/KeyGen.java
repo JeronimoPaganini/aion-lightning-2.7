@@ -24,7 +24,7 @@ import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import com.aionlightning.commons.utils.Rnd;
+import com.aionemu.commons.utils.Rnd;
 
 /**
  * Key generator. It generates keys or keyPairs for Blowfish and RSA

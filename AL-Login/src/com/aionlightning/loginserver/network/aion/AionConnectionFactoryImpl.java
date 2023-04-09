@@ -18,9 +18,9 @@ package com.aionlightning.loginserver.network.aion;
 
 import java.io.IOException;
 import java.nio.channels.SocketChannel;
-import com.aionlightning.commons.network.AConnection;
-import com.aionlightning.commons.network.ConnectionFactory;
-import com.aionlightning.commons.network.Dispatcher;
+import com.aionemu.commons.network.AConnection;
+import com.aionemu.commons.network.ConnectionFactory;
+import com.aionemu.commons.network.Dispatcher;
 import com.aionlightning.loginserver.configs.Config;
 import com.aionlightning.loginserver.utils.FloodProtector;
 
@@ -32,16 +32,16 @@ import com.aionlightning.loginserver.utils.FloodProtector;
 public class AionConnectionFactoryImpl implements ConnectionFactory {
 
 	/**
-	 * Create a new {@link com.aionlightning.commons.network.AConnection AConnection} instance.<br>
+	 * Create a new {@link com.aionemu.commons.network.AConnection AConnection} instance.<br>
 	 * 
 	 * @param socket
-	 *          that new {@link com.aionlightning.commons.network.AConnection AConnection} instance will represent.<br>
+	 *          that new {@link com.aionemu.commons.network.AConnection AConnection} instance will represent.<br>
 	 * @param dispatcher
 	 *          to witch new connection will be registered.<br>
-	 * @return a new instance of {@link com.aionlightning.commons.network.AConnection AConnection}<br>
+	 * @return a new instance of {@link com.aionemu.commons.network.AConnection AConnection}<br>
 	 * @throws IOException
-	 * @see com.aionlightning.commons.network.AConnection
-	 * @see com.aionlightning.commons.network.Dispatcher
+	 * @see com.aionemu.commons.network.AConnection
+	 * @see com.aionemu.commons.network.Dispatcher
 	 */
 	@Override
 	public AConnection create(SocketChannel socket, Dispatcher dispatcher) throws IOException {

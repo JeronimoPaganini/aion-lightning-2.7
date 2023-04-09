@@ -72,6 +72,8 @@ public class _4937RecognitionOfThePreceptors extends QuestHandler {
 						case STEP_TO_1: {
 							return defaultCloseDialog(env, 0, 1); // 1
 						}
+					default:
+						break;
 					}
 					break;
 				}
@@ -85,6 +87,8 @@ public class _4937RecognitionOfThePreceptors extends QuestHandler {
 						case STEP_TO_2: {
 							return defaultCloseDialog(env, 1, 2); // 2
 						}
+					default:
+						break;
 					}
 					break;
 				}
@@ -98,6 +102,8 @@ public class _4937RecognitionOfThePreceptors extends QuestHandler {
 						case STEP_TO_3: {
 							return defaultCloseDialog(env, 2, 3); // 3
 						}
+					default:
+						break;
 					}
 					break;
 				}
@@ -111,6 +117,8 @@ public class _4937RecognitionOfThePreceptors extends QuestHandler {
 						case STEP_TO_4: {
 							return defaultCloseDialog(env, 3, 4, 182207113, 1, 182207112, 1); // 4
 						}
+					default:
+						break;
 					}
 					break;
 				}
@@ -127,6 +135,8 @@ public class _4937RecognitionOfThePreceptors extends QuestHandler {
 						case SET_REWARD: {
 							return checkItemExistence(env, 4, 4, true, 186000084, 1, true, 0, 2461, 0, 0); // reward
 						}
+					default:
+						break;
 					}
 				}
 			}

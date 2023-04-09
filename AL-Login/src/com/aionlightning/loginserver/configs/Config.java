@@ -19,11 +19,11 @@ package com.aionlightning.loginserver.configs;
 import java.util.Properties;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import com.aionlightning.commons.configs.DatabaseConfig;
-import com.aionlightning.commons.configuration.ConfigurableProcessor;
-import com.aionlightning.commons.configuration.Property;
-import com.aionlightning.commons.utils.PropertiesUtils;
-import com.aionlightning.commons.configs.CommonsConfig;
+import com.aionemu.commons.configs.DatabaseConfig;
+import com.aionemu.commons.configuration.ConfigurableProcessor;
+import com.aionemu.commons.configuration.Property;
+import com.aionemu.commons.utils.PropertiesUtils;
+import com.aionemu.commons.configs.CommonsConfig;
 
 /**
  * @author -Nemesiss-

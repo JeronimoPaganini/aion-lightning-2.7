@@ -53,14 +53,12 @@ public class _80000JoyfulDaevasDay extends QuestHandler {
 				closeDialogWindow(env);
 				return true;
 			}
-		}
-		else if (env.getTargetId() == 798415) // Ias
+		} else if (env.getTargetId() == 798415) // Ias
 		{
 			if (qs != null) {
 				if (env.getDialog() == QuestDialog.START_DIALOG && qs.getStatus() == QuestStatus.START) {
 					return sendQuestDialog(env, 2375);
-				}
-				else if (env.getDialog() == QuestDialog.SELECT_REWARD) {
+				} else if (env.getDialog() == QuestDialog.SELECT_REWARD) {
 					qs.setQuestVar(1);
 					qs.setStatus(QuestStatus.REWARD);
 					updateQuestStatus(env);

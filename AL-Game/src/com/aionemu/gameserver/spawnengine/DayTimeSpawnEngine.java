@@ -39,6 +39,7 @@ import com.aionemu.gameserver.world.World;
 /**
  * @author ATracer
  */
+@Deprecated
 public class DayTimeSpawnEngine {
 
 	private static final Logger log = LoggerFactory.getLogger(DayTimeSpawnEngine.class);

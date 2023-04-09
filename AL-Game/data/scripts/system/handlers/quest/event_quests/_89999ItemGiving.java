@@ -60,21 +60,22 @@ public class _89999ItemGiving extends QuestHandler {
 
 		int targetId = env.getVisibleObject().getObjectId();
 		switch (env.getDialog()) {
-			case USE_OBJECT:
-				PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetId, 1011, 0));
+		case USE_OBJECT:
+			PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetId, 1011, 0));
+			return true;
+		case SELECT_ACTION_1012: {
+			Storage inventory = player.getInventory();
+			if (inventory.getItemCountByItemId(itemId) > 0) {
+				PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetId, 1097, 0));
 				return true;
-			case SELECT_ACTION_1012: {
-				Storage inventory = player.getInventory();
-				if (inventory.getItemCountByItemId(itemId) > 0) {
-					PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetId, 1097, 0));
-					return true;
-				}
-				else {
-					if (giveQuestItem(env, itemId, 1))
-						PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetId, 1012, 0));
-					return true;
-				}
+			} else {
+				if (giveQuestItem(env, itemId, 1))
+					PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetId, 1012, 0));
+				return true;
 			}
+		}
+		default:
+			break;
 		}
 		return false;
 

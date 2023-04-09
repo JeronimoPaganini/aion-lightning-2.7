@@ -77,6 +77,8 @@ public class _11010AngelToTheWounded extends QuestHandler {
 								return sendQuestDialog(env, 1352);
 						case STEP_TO_1:
 							return defaultCloseDialog(env, 0, 1); // 1
+					default:
+						break;
 					}
 					break;
 				case 798906:
@@ -86,6 +88,8 @@ public class _11010AngelToTheWounded extends QuestHandler {
 								return sendQuestDialog(env, 1693);
 						case STEP_TO_2:
 							return defaultCloseDialog(env, 1, 2); // 2
+					default:
+						break;
 					}
 					break;
 				case 730323:

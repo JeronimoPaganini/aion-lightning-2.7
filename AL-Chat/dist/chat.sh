@@ -1,0 +1,1 @@
+java -Xms512m -Xmx1024m -ea -Xbootclasspath/p:./libs/jsr166.jar -cp ./libs/*:NG-Chat.jar com.aionemu.chatserver.ChatServer

@@ -111,6 +111,8 @@ public class _10023SullasStartlingDiscovery extends QuestHandler {
 						case STEP_TO_1: {
 							return defaultCloseDialog(env, 0, 1); // 1
 						}
+					default:
+						break;
 					}
 					break;
 				}
@@ -136,6 +138,8 @@ public class _10023SullasStartlingDiscovery extends QuestHandler {
 						case STEP_TO_10: {
 							return defaultCloseDialog(env, 9, 10); // 10
 						}
+					default:
+						break;
 					}
 					break;
 				}
@@ -149,6 +153,8 @@ public class _10023SullasStartlingDiscovery extends QuestHandler {
 						case STEP_TO_3: {
 							return defaultCloseDialog(env, 2, 3); // 3
 						}
+					default:
+						break;
 					}
 					break;
 				}
@@ -162,6 +168,8 @@ public class _10023SullasStartlingDiscovery extends QuestHandler {
 						case STEP_TO_8: {
 							return defaultCloseDialog(env, 7, 8); // 8
 						}
+					default:
+						break;
 					}
 					break;
 				}
@@ -175,6 +183,8 @@ public class _10023SullasStartlingDiscovery extends QuestHandler {
 						case STEP_TO_9: {
 							return defaultCloseDialog(env, 8, 9); // 9
 						}
+					default:
+						break;
 					}
 					break;
 				}
@@ -188,6 +198,8 @@ public class _10023SullasStartlingDiscovery extends QuestHandler {
 						case STEP_TO_11: {
 							return defaultCloseDialog(env, 10, 11); // 11
 						}
+					default:
+						break;
 					}
 					break;
 				}
@@ -201,6 +213,8 @@ public class _10023SullasStartlingDiscovery extends QuestHandler {
 						case STEP_TO_12: {
 							return defaultCloseDialog(env, 11, 12, 182206613, 1, 0, 0); // 12
 						}
+					default:
+						break;
 					}
 					break;
 				}
@@ -225,6 +239,8 @@ public class _10023SullasStartlingDiscovery extends QuestHandler {
 									return sendQuestDialog(env, 10001);
 							}
 						}
+					default:
+						break;
 					}
 					break;
 				}

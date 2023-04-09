@@ -137,7 +137,6 @@ public class AI2Engine implements GameEngine {
 		return SingletonHolder.instance;
 	}
 
-	@SuppressWarnings("synthetic-access")
 	private static class SingletonHolder {
 
 		protected static final AI2Engine instance = new AI2Engine();

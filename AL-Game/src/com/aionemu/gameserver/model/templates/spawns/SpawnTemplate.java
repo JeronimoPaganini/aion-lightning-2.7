@@ -16,6 +16,7 @@
  */
 package com.aionemu.gameserver.model.templates.spawns;
 
+import com.aionemu.gameserver.model.gameobjects.VisibleObject;
 import com.aionemu.gameserver.model.templates.event.EventTemplate;
 import com.aionemu.gameserver.spawnengine.SpawnHandlerType;
 
@@ -38,6 +39,8 @@ public class SpawnTemplate {
 	private boolean isUsed;
 	private SpawnGroup2 spawnGroup;
 	private EventTemplate eventTemplate;
+	private TemporarySpawn temporarySpawn;
+	private VisibleObject visibleObject;
 
 	public SpawnTemplate(SpawnGroup2 spawnGroup, SpawnSpotTemplate spot) {
 		this.spawnGroup = spawnGroup;
@@ -51,6 +54,7 @@ public class SpawnTemplate {
 		fly = spot.getFly();
 		anchor = spot.getAnchor();
 		walkerIdx = spot.getWalkerIndex();
+		temporarySpawn = spot.getTemporarySpawn();
 	}
 
 	public SpawnTemplate(SpawnGroup2 spawnGroup, float x, float y, float z, byte heading, int randWalk, String walkerId,
@@ -147,6 +151,10 @@ public class SpawnTemplate {
 		spawnGroup.setRespawnTime(respawnTime);
 	}
 
+	public TemporarySpawn getTemporarySpawn() {
+		return temporarySpawn != null ? temporarySpawn : spawnGroup.geTemporarySpawn();
+	}
+
 	public SpawnTime getSpawnTime() {
 		return spawnGroup.getSpawnTime();
 	}
@@ -197,5 +205,13 @@ public class SpawnTemplate {
 
 	public void setEventTemplate(EventTemplate eventTemplate) {
 		this.eventTemplate = eventTemplate;
+	}
+
+	public VisibleObject getVisibleObject() {
+		return visibleObject;
+	}
+
+	public void setVisibleObject(VisibleObject visibleObject) {
+		this.visibleObject = visibleObject;
 	}
 }

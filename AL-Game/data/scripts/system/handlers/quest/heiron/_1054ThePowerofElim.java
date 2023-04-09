@@ -66,6 +66,8 @@ public class _1054ThePowerofElim extends QuestHandler {
 					case STEP_TO_1: {
 						return defaultCloseDialog(env, 0, 1); // 1
 					}
+				default:
+					break;
 				}
 			}
 			else if (targetId == 204647) { // Voice of Arbolu
@@ -107,6 +109,8 @@ public class _1054ThePowerofElim extends QuestHandler {
 					case FINISH_DIALOG: {
 						return sendQuestSelectionDialog(env);
 					}
+				default:
+					break;
 				}
 			}
 			else if (targetId == 730008) { // Daminu
@@ -119,6 +123,8 @@ public class _1054ThePowerofElim extends QuestHandler {
 					case STEP_TO_3: {
 						return defaultCloseDialog(env, 2, 3, 182201606, 1, 0, 0); // 3
 					}
+				default:
+					break;
 				}
 			}
 			else if (targetId == 730019) { // Lodas
@@ -131,6 +137,8 @@ public class _1054ThePowerofElim extends QuestHandler {
 					case STEP_TO_4: {
 						return defaultCloseDialog(env, 3, 4, 182201607, 1, 0, 0); // 4
 					}
+				default:
+					break;
 				}
 			}
 		}

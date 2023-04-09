@@ -16,7 +16,7 @@
  */
 package com.aionlightning.loginserver.utils.cron;
 
-import com.aionlightning.commons.services.cron.RunnableRunner;
+import com.aionemu.commons.services.cron.RunnableRunner;
 import com.aionlightning.loginserver.utils.ThreadPoolManager;
 
 public class ThreadPoolManagerRunnableRunner extends RunnableRunner

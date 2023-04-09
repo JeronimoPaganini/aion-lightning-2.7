@@ -353,6 +353,8 @@ public class AttackUtil {
 					damage *= 2;
 				damage = calculateDamageByReduction(attacked, damage, StatEnum.MAGICAL_CRITICAL_DAMAGE_REDUCE);
 				break;
+		default:
+			break;
 		}
 		attackList.add(new AttackResult(damage, status));
 		attacked.getObserveController().checkShieldStatus(attackList, attacker);
@@ -560,6 +562,8 @@ public class AttackUtil {
 				case MAGICAL_CRITICAL_DAMAGE_REDUCE:
 					int fortitude = player.getGameStats().getStat(stat, 0).getCurrent();
 					damage -= Math.round((fortitude / 1000f) * damage);
+			default:
+				break;
 			}
 		}
 		return damage;
@@ -577,6 +581,8 @@ public class AttackUtil {
 					break;
 				case BOW:
 					skillId = 8217;
+			default:
+				break;
 			}
 		}
 		

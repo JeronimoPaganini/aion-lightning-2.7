@@ -127,7 +127,6 @@ public class ChatServer {
 			chatServer.sendPacket(new SM_CS_PLAYER_LOGOUT(player.getObjectId()));
 	}
 
-	@SuppressWarnings("synthetic-access")
 	private static class SingletonHolder {
 
 		protected static final ChatServer instance = new ChatServer();

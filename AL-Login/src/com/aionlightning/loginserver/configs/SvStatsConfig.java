@@ -16,7 +16,7 @@
  */
 package com.aionlightning.loginserver.configs;
 
-import com.aionlightning.commons.configuration.Property;
+import com.aionemu.commons.configuration.Property;
 
 public class SvStatsConfig
 {

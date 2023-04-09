@@ -129,6 +129,8 @@ public class ReportTo extends QuestHandler {
 						updateQuestStatus(env);
 						return sendQuestEndDialog(env);
 					}
+				default:
+					break;
 				}
 			}
 		}

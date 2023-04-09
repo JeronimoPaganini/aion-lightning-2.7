@@ -67,6 +67,9 @@ public class SpawnEngine {
 
 				}, 1000);
 		}
+
+		spawn.setVisibleObject(visObj);
+
 		return visObj;
 	}
 
@@ -215,7 +218,10 @@ public class SpawnEngine {
 		int spawnedCounter = 0;
 		if (worldSpawns != null) {
 			for (SpawnGroup2 spawn : worldSpawns) {
-				if (spawn.isPartialDaySpawn()) {
+				if (spawn.isTemporarySpawn()) {
+					TemporarySpawnEngine.addSpawnGroup(spawn);
+				}
+				else if (spawn.isPartialDaySpawn()) {
 					DayTimeSpawnEngine.addSpawnGroup(spawn);
 				}
 				else {

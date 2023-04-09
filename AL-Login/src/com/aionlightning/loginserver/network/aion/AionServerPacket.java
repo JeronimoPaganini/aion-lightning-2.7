@@ -17,7 +17,7 @@
 package com.aionlightning.loginserver.network.aion;
 
 import java.nio.ByteBuffer;
-import com.aionlightning.commons.network.packet.BaseServerPacket;
+import com.aionemu.commons.network.packet.BaseServerPacket;
 
 /**
  * Base class for every LS -> Aion Server Packet.

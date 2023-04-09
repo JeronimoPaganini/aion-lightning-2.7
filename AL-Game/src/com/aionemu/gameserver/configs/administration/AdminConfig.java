@@ -93,4 +93,10 @@ public class AdminConfig {
 	
 	@Property(key = "gameserver.admin.announce.force.level", defaultValue = "12")
 	public static int ANNOUNCE_FORCE_LEVEL;
+
+	/**
+	 * GM special skill
+	 */
+	@Property(key = "administration.command.special.skill", defaultValue = "3")
+	public static int COMMAND_SPECIAL_SKILL;
 }

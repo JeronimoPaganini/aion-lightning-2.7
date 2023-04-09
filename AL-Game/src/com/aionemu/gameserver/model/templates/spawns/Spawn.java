@@ -56,6 +56,9 @@ public class Spawn {
 	@XmlAttribute(name = "npc_id", required = true)
 	private int npcId;
 
+	@XmlElement(name = "temporary_spawn")
+	private TemporarySpawn temporaySpawn;
+
 	@XmlElement(name = "spot")
 	private List<SpawnSpotTemplate> spawnTemplates;
 
@@ -99,6 +102,10 @@ public class Spawn {
 
 	public SpawnTime getSpawnTime() {
 		return spawnTime;
+	}
+
+	public TemporarySpawn getTemporarySpawn() {
+		return temporaySpawn;
 	}
 
 	public int getRespawnTime() {

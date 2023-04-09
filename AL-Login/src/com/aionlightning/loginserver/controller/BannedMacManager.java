@@ -19,7 +19,7 @@ package com.aionlightning.loginserver.controller;
 import java.sql.Timestamp;
 import java.util.Map;
 import javolution.util.FastMap;
-import com.aionlightning.commons.database.dao.DAOManager;
+import com.aionemu.commons.database.dao.DAOManager;
 import com.aionlightning.loginserver.dao.BannedMacDAO;
 import com.aionlightning.loginserver.model.base.BannedMacEntry;
 

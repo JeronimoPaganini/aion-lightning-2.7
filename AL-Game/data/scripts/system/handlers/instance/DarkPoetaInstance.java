@@ -407,6 +407,8 @@ public class DarkPoetaInstance extends GeneralInstanceHandler {
 			case ASMODIANS:
 				storage.decreaseByItemId(185000041, 1);
 				break;
+		default:
+			break;
 		}
 	}
 

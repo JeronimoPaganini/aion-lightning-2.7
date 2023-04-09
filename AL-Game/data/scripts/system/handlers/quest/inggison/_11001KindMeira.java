@@ -87,6 +87,8 @@ public class _11001KindMeira extends QuestHandler {
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 							return true;
 						}
+					default:
+						break;
 					}
 				}
 				case 798946: {
@@ -100,6 +102,8 @@ public class _11001KindMeira extends QuestHandler {
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 							return true;
 						}
+					default:
+						break;
 					}
 				}
 				case 798943: {
@@ -113,6 +117,8 @@ public class _11001KindMeira extends QuestHandler {
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 							return true;
 						}
+					default:
+						break;
 					}
 				}
 				case 798945: {

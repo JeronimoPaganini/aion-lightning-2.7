@@ -122,6 +122,8 @@ public class KromedesTrialInstance extends GeneralInstanceHandler {
 			case KALIGA_DUNGEONS_300230000:
 				inManor = true;
 				break;
+		default:
+			break;
 		}
 	}
 

@@ -166,7 +166,7 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_EXCHANGE_OK(0x2B7, State.IN_GAME));// 2.6
 		addPacket(new CM_MANASTONE(0x2B9, State.IN_GAME));// 2.7
 		addPacket(new CM_MOTION(0x2BA, State.IN_GAME));// 2.6
-		addPacket(new CM_FIND_GROUP(0x2BC, State.IN_GAME));//2.7 //TODO its sent also on AUTHED state
+		addPacket(new CM_FIND_GROUP(0x2BC, State.AUTHED, State.IN_GAME));// 2.7
 		addPacket(new CM_CHARGE_ITEM(0x2BD, State.IN_GAME));// 2.6
 		addPacket(new CM_LEGION_WH_KINAH(0x2BF, State.IN_GAME));// 2.6
 		addPacket(new CM_CHARACTER_PASSKEY(0x1C0, State.AUTHED));// 2.6
@@ -193,7 +193,6 @@ public class AionPacketHandlerFactory {
 		handler.addPacketPrototype(prototype);
 	}
 
-	@SuppressWarnings("synthetic-access")
 	private static class SingletonHolder {
 
 		protected static final AionPacketHandlerFactory instance = new AionPacketHandlerFactory();

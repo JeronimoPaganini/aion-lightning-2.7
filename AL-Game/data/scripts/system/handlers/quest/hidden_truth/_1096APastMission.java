@@ -70,6 +70,8 @@ public class _1096APastMission extends QuestHandler {
 								PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 								return true;
 							}
+					default:
+						break;
 					}
 				}
 					break;
@@ -86,6 +88,8 @@ public class _1096APastMission extends QuestHandler {
 								PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 								return true;
 							}
+					default:
+						break;
 					}
 				}
 					break;

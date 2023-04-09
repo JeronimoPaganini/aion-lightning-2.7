@@ -16,7 +16,7 @@
  */
 package com.aionlightning.loginserver.taskmanager.handler.implementations;
 
-import com.aionlightning.commons.database.dao.DAOManager;
+import com.aionemu.commons.database.dao.DAOManager;
 import com.aionlightning.loginserver.dao.AccountDAO;
 import com.aionlightning.loginserver.taskmanager.handler.TaskFromDBHandler;
 import org.slf4j.Logger;

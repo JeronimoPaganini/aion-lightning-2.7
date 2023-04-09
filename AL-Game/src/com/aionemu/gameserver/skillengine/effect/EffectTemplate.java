@@ -619,6 +619,8 @@ public abstract class EffectTemplate {
 			case STUMBLE_RESISTANCE:
 			case STUN_RESISTANCE:
 				return true;
+		default:
+			break;
 		}
 		return false;
 	}

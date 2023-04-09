@@ -19,7 +19,7 @@ package com.aionlightning.loginserver.dao;
 import java.sql.Timestamp;
 import java.util.Set;
 
-import com.aionlightning.commons.database.dao.DAO;
+import com.aionemu.commons.database.dao.DAO;
 import com.aionlightning.loginserver.model.BannedIP;
 
 /**

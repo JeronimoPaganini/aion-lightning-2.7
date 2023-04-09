@@ -39,6 +39,8 @@ public class TrapGameStats extends NpcGameStats {
 				// bonus is calculated from stat bonus of master (only green value)
 				stat.setBonusRate(0.7f); //TODO: retail formula?
 				return owner.getMaster().getGameStats().getItemStatBoost(statEnum, stat);
+		default:
+			break;
 
 		}
 		return stat;

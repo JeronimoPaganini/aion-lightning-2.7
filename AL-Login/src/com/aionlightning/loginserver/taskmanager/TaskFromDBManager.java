@@ -19,7 +19,7 @@ package com.aionlightning.loginserver.taskmanager;
 import java.util.ArrayList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import com.aionlightning.commons.database.dao.DAOManager;
+import com.aionemu.commons.database.dao.DAOManager;
 import com.aionlightning.loginserver.dao.TaskFromDBDAO;
 import com.aionlightning.loginserver.taskmanager.trigger.TaskFromDBTrigger;
 

@@ -229,7 +229,6 @@ public final class DataManager {
 		log.info("##### [Static Data loaded in: " + timeMsg + "] #####");
 	}
 
-	@SuppressWarnings("synthetic-access")
 	private static class SingletonHolder {
 
 		protected static final DataManager instance = new DataManager();

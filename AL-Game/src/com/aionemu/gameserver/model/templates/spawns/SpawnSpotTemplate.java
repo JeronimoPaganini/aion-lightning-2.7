@@ -20,6 +20,7 @@ import javax.xml.bind.Marshaller;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
@@ -62,6 +63,9 @@ public class SpawnSpotTemplate {
 	
 	@XmlAttribute(name = "x", required = true)
 	private float x;
+
+	@XmlElement(name = "temporary_spawn")
+	private TemporarySpawn temporaySpawn;
 
 	public SpawnSpotTemplate() {
 	}
@@ -153,5 +157,9 @@ public class SpawnSpotTemplate {
 
 	public String getAnchor() {
 		return anchor;
+	}
+
+	public TemporarySpawn getTemporarySpawn() {
+		return temporaySpawn;
 	}
 }

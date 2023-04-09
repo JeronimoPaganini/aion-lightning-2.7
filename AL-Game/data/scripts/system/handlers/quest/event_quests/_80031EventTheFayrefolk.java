@@ -61,8 +61,7 @@ public class _80031EventTheFayrefolk extends QuestHandler {
 				else if (env.getDialog() == QuestDialog.SELECT_REWARD) {
 					defaultCloseDialog(env, 0, 0, true, true);
 					return sendQuestDialog(env, 5);
-				}
-				else if (env.getDialog() == QuestDialog.SELECT_NO_REWARD)
+				} else if (env.getDialog() == QuestDialog.SELECT_NO_REWARD)
 					return sendQuestRewardDialog(env, 799781, 5);
 				else
 					return sendQuestStartDialog(env);
@@ -70,7 +69,7 @@ public class _80031EventTheFayrefolk extends QuestHandler {
 		}
 		return sendQuestRewardDialog(env, 799781, 0);
 	}
-	
+
 	@Override
 	public boolean onLvlUpEvent(QuestEnv env) {
 		Player player = env.getPlayer();

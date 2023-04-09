@@ -79,6 +79,8 @@ public class _11005TheLimitsofGenius extends QuestHandler {
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 							return true;
 						}
+					default:
+						break;
 					}
 				}
 				case 798951: {
@@ -92,6 +94,8 @@ public class _11005TheLimitsofGenius extends QuestHandler {
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 							return true;
 						}
+					default:
+						break;
 					}
 				}
 				case 798942: {

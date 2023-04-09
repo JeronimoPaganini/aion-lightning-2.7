@@ -20,26 +20,20 @@
 	<target name="clean" description="Removes build directory.">
 		<delete dir="${build}" />
 	</target>
+
 	<target name="init" depends="clean" description="Create the output directories.">
 		<mkdir dir="${build}" />
 		<mkdir dir="${build.classes}" />
 	</target>
+
 	<target name="compile" depends="init" description="Compile the source.">
-		<javac destdir="${build.classes}" optimize="on" debug="on"
-			nowarn="off" source="1.6" target="1.6" includeantruntime="false">
+		<javac destdir="${build.classes}" optimize="on" debug="on" nowarn="off" source="1.6" target="1.6" includeantruntime="false">
 			<src path="${src}" />
 			<classpath refid="classpath" />
 		</javac>
 	</target>
+
 	<target name="jar" depends="compile" description="Create the jar file">
-		<exec dir="build" executable="svnversion.exe" outputproperty="revision"
-			failifexecutionfails="false" osfamily="windows">
-			<arg line="-n ." />
-		</exec>
-		<exec dir="build" executable="svnversion" outputproperty="revision"
-			failifexecutionfails="false" osfamily="unix">
-			<arg line="-n ." />
-		</exec>
 		<tstamp>
 			<format property="date" pattern="yyyy-MM-dd-HH:mm" />
 		</tstamp>
@@ -52,7 +46,6 @@
             	<attribute name="Date" value="${date}"/>
             </manifest>
         </jar>
-
 	</target>
  
     <target name="dist" depends="jar">

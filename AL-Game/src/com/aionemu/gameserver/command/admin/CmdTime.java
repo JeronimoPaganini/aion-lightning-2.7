@@ -4,6 +4,7 @@ import com.aionemu.gameserver.command.BaseCommand;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_GAME_TIME;
 import com.aionemu.gameserver.spawnengine.DayTimeSpawnEngine;
+import com.aionemu.gameserver.spawnengine.TemporarySpawnEngine;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.gametime.GameTimeManager;
 import com.aionemu.gameserver.world.World;
@@ -74,6 +75,8 @@ public class CmdTime extends BaseCommand {
 					PacketSendUtility.sendPacket(player, new SM_GAME_TIME());
 				}
 			});
+
+			TemporarySpawnEngine.spawnAll();
 			DayTimeSpawnEngine.spawnAll();
 
 			PacketSendUtility.sendMessage(admin, "You changed the time to " + params[0].toString() + ".");

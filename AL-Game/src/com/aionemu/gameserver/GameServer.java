@@ -62,6 +62,7 @@ import com.aionemu.gameserver.spawnengine.DayTimeSpawnEngine;
 import com.aionemu.gameserver.spawnengine.InstanceRiftSpawnManager;
 import com.aionemu.gameserver.spawnengine.RiftSpawnManager;
 import com.aionemu.gameserver.spawnengine.SpawnEngine;
+import com.aionemu.gameserver.spawnengine.TemporarySpawnEngine;
 import com.aionemu.gameserver.taskmanager.TaskManagerFromDB;
 import com.aionemu.gameserver.taskmanager.tasks.PacketBroadcaster;
 import com.aionemu.gameserver.utils.AEVersions;
@@ -209,7 +210,9 @@ public class GameServer {
 		SpawnEngine.spawnAll();
 		RiftSpawnManager.spawnAll();
 		InstanceRiftSpawnManager.spawnAll();
+		//TODO: Remove DayTime based spawns
 		DayTimeSpawnEngine.spawnAll();
+		TemporarySpawnEngine.spawnAll();
 
 		// Init Sieges... It's separated due to spawn engine.
 		// It should not spawn siege NPCs

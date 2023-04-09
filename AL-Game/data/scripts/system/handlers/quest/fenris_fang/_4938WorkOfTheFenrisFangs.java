@@ -74,6 +74,8 @@ public class _4938WorkOfTheFenrisFangs extends QuestHandler {
 						case STEP_TO_1: {
 							return defaultCloseDialog(env, 0, 1); // 1
 						}
+					default:
+						break;
 					}
 					break;
 				}
@@ -87,6 +89,8 @@ public class _4938WorkOfTheFenrisFangs extends QuestHandler {
 						case STEP_TO_2: {
 							return defaultCloseDialog(env, 1, 2); // 2
 						}
+					default:
+						break;
 					}
 					break;
 				}
@@ -100,6 +104,8 @@ public class _4938WorkOfTheFenrisFangs extends QuestHandler {
 						case STEP_TO_3: {
 							return defaultCloseDialog(env, 2, 3); // 3
 						}
+					default:
+						break;
 					}
 					break;
 				}
@@ -113,6 +119,8 @@ public class _4938WorkOfTheFenrisFangs extends QuestHandler {
 						case STEP_TO_4: {
 							return defaultCloseDialog(env, 3, 4); // 4
 						}
+					default:
+						break;
 					}
 					break;
 				}
@@ -126,6 +134,8 @@ public class _4938WorkOfTheFenrisFangs extends QuestHandler {
 						case STEP_TO_5: {
 							return defaultCloseDialog(env, 4, 5); // 5
 						}
+					default:
+						break;
 					}
 					break;
 				}
@@ -139,6 +149,8 @@ public class _4938WorkOfTheFenrisFangs extends QuestHandler {
 						case STEP_TO_6: {
 							return defaultCloseDialog(env, 5, 6); // 6
 						}
+					default:
+						break;
 					}
 					break;
 				}
@@ -152,6 +164,8 @@ public class _4938WorkOfTheFenrisFangs extends QuestHandler {
 						case STEP_TO_7: {
 							return defaultCloseDialog(env, 6, 7); // 7
 						}
+					default:
+						break;
 					}
 					break;
 				}
@@ -165,6 +179,8 @@ public class _4938WorkOfTheFenrisFangs extends QuestHandler {
 						case STEP_TO_8: {
 							return defaultCloseDialog(env, 7, 8); // 8
 						}
+					default:
+						break;
 					}
 					break;
 				}
@@ -187,6 +203,8 @@ public class _4938WorkOfTheFenrisFangs extends QuestHandler {
 						case FINISH_DIALOG: {
 							return sendQuestSelectionDialog(env);
 						}
+					default:
+						break;
 					}
 					break;
 				}

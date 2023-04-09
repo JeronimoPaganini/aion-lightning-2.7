@@ -342,7 +342,6 @@ public class CraftSkillUpdateService {
 			return false;
 	}
 
-	@SuppressWarnings("synthetic-access")
 	private static class SingletonHolder {
 
 		protected static final CraftSkillUpdateService instance = new CraftSkillUpdateService();

@@ -88,6 +88,8 @@ public class _10021FriendsForLife extends QuestHandler {
 						case STEP_TO_1: {
 							return defaultCloseDialog(env, 0, 1); // 1
 						}
+					default:
+						break;
 					}
 					break;
 				}
@@ -107,6 +109,8 @@ public class _10021FriendsForLife extends QuestHandler {
 						case SET_REWARD: {
 							return defaultCloseDialog(env, 8, 8, true, false); // reward
 						}
+					default:
+						break;
 					}
 					break;
 				}
@@ -153,6 +157,8 @@ public class _10021FriendsForLife extends QuestHandler {
 						case FINISH_DIALOG: {
 							return sendQuestSelectionDialog(env);
 						}
+					default:
+						break;
 					}
 					break;
 				}

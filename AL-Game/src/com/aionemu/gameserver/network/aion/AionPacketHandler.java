@@ -23,8 +23,11 @@ import java.util.Map;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.aionemu.gameserver.configs.administration.DeveloperConfig;
 import com.aionemu.gameserver.configs.network.NetworkConfig;
+import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.AionConnection.State;
+import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.Util;
 
 /**
@@ -67,46 +70,87 @@ public class AionPacketHandler {
 			unknownPacket(state, id, buf);
 			return null;
 		}
-		log.debug("PACKET : " + getHexString(toBytes(id)));
+
+		/**
+		 * Display Packets Name + Hex-Bytes in Chat Window
+		 */
+		Player player = con.getActivePlayer();
+
+		if (con.getState().equals(State.IN_GAME) && player != null && player.getAccessLevel() >= DeveloperConfig.SHOW_PACKETS_INCHAT_ACCESSLEVEL) {
+			if (isPacketFilterd(DeveloperConfig.FILTERED_PACKETS_INCHAT, prototype.getPacketName())) {
+				if (DeveloperConfig.SHOW_PACKET_BYTES_INCHAT) {
+					String PckName = String.format("0x%04X : %s", id, prototype.getPacketName());
+					PacketSendUtility.sendMessage(player, "********************************************");
+					PacketSendUtility.sendMessage(player, PckName);
+					PacketSendUtility.sendMessage(player, Util.toHexStream(getByteBuffer(buf, DeveloperConfig.TOTAL_PACKET_BYTES_INCHAT)));
+					buf.position(5);
+
+				}
+				else if (DeveloperConfig.SHOW_PACKET_NAMES_INCHAT) {
+					String PckName = String.format("0x%04X : %s", id, prototype.getPacketName());
+					PacketSendUtility.sendMessage(player, PckName);
+				}
+			}
+		}
 		AionClientPacket res = prototype.clonePacket();
 		res.setBuffer(buf);
 		res.setConnection(con);
 
+		if (con.getState().equals(State.IN_GAME) && con.getActivePlayer().getPlayerAccount().getMembership() == 10) {
+			PacketSendUtility.sendMessage(con.getActivePlayer(), "0x" + Integer.toHexString(res.getOpcode()).toUpperCase() + " : " + res.getPacketName());
+		}
 		return res;
 	}
 	
-	private static String getHexString(byte[] bytes) {
-		String result = new String();
-		for (byte b : bytes) {
-			if (b <= 0x0F && b >= 0x00)
-				result += '0';
-			result += String.format("%x", b);
+	private boolean isPacketFilterd(String filterlist, String PacketName) {
+
+		// If FilterList was empty, all packets will be shown.
+		if (filterlist == null || filterlist.equalsIgnoreCase("*"))
+			return true;
+
+		String[] Parts = null;
+		Parts = filterlist.trim().split(",");
+
+		for (String p : Parts) {
+			if (p.trim().equalsIgnoreCase(PacketName)) {
+				return true;
+			}
 		}
-		return result;
-	}
-	
-	private byte[] toBytes(int i){
-		byte[] result = new byte[4];
-
-		result[0] = (byte) (i >> 24);
-		result[1] = (byte) (i >> 16);
-		result[2] = (byte) (i >> 8);
-		result[3] = (byte) (i /*>> 0*/);
-
-		return result;
+		return false;
 	}
 
+	private ByteBuffer getByteBuffer(ByteBuffer buf, int count) {
+
+		count = (count <= buf.capacity()) ? count : buf.capacity();
+		ByteBuffer tmpBuffer = buf.asReadOnlyBuffer();
+		tmpBuffer.position(5);
+		tmpBuffer.limit(count);
+
+		// Create an empty ByteBuffer with a Requested Capacity.
+		ByteBuffer PckBuffer = ByteBuffer.allocate(count);
+		try {
+			do {
+				PckBuffer.put(tmpBuffer.get());
+			}
+			while (tmpBuffer.remaining() > 0);
+		}
+		catch (Exception e) {
+			// e.printStackTrace();
+		}
+		PckBuffer.position(0);
+		return PckBuffer;
+	}
 
 	/**
 	 * Logs unknown packet.
-	 * 
+	 *
 	 * @param state
 	 * @param id
 	 * @param data
 	 */
 	private void unknownPacket(State state, int id, ByteBuffer data) {
 		if (NetworkConfig.DISPLAY_UNKNOWNPACKETS) {
-			log.warn(String.format("Unknown packet recived from Aion client: 0x%04X, state=%s %n%s", id, state.toString(),
+			log.warn(String.format("Unknown packet received from Aion client: 0x%04X, state=%s %n%s", id, state.toString(),
 				Util.toHex(data)));
 		}
 	}

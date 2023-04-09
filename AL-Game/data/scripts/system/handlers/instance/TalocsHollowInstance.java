@@ -73,6 +73,8 @@ public class TalocsHollowInstance extends GeneralInstanceHandler {
 				ItemService.addItem(player, 160001287, 1);
 				ItemService.addItem(player, 182207603, 1);
 				break;
+		default:
+			break;
 		}
 	}
 
@@ -95,6 +97,8 @@ public class TalocsHollowInstance extends GeneralInstanceHandler {
 					player.getEffectController().removeEffect(10252);
 				}
 				break;
+		default:
+			break;
 		}
 	}
 

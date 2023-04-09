@@ -18,8 +18,8 @@ package com.aionlightning.loginserver.controller;
 
 import java.util.HashMap;
 import java.util.Map;
-import com.aionlightning.commons.database.dao.DAOManager;
-import com.aionlightning.commons.utils.NetworkUtils;
+import com.aionemu.commons.database.dao.DAOManager;
+import com.aionemu.commons.utils.NetworkUtils;
 import com.aionlightning.loginserver.GameServerInfo;
 import com.aionlightning.loginserver.GameServerTable;
 import com.aionlightning.loginserver.configs.Config;

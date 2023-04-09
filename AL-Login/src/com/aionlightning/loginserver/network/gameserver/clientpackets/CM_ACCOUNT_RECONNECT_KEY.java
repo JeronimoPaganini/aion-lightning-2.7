@@ -18,7 +18,7 @@ package com.aionlightning.loginserver.network.gameserver.clientpackets;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import com.aionlightning.commons.utils.Rnd;
+import com.aionemu.commons.utils.Rnd;
 import com.aionlightning.loginserver.controller.AccountController;
 import com.aionlightning.loginserver.model.Account;
 import com.aionlightning.loginserver.model.ReconnectingAccount;

@@ -48,6 +48,8 @@ public class SummonedObjectGameStats extends NpcGameStats {
 				stat.setBonusRate(0.2f);
 				owner.getMaster().getGameStats().getItemStatBoost(StatEnum.MAIN_HAND_POWER, stat);
 				return owner.getMaster().getGameStats().getItemStatBoost(statEnum, stat);
+		default:
+			break;
 
 		}
 		return stat;

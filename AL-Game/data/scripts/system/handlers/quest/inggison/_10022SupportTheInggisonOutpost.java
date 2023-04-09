@@ -101,6 +101,8 @@ public class _10022SupportTheInggisonOutpost extends QuestHandler {
 					return defaultCloseDialog(env, 0, 1); // 1
 				case SET_REWARD:
 					return defaultCloseDialog(env, 11, 11, true, false); // reward
+			default:
+				break;
 			}
 		}
 		else if (targetId == 798996) {
@@ -125,6 +127,8 @@ public class _10022SupportTheInggisonOutpost extends QuestHandler {
 				case STEP_TO_10:
 					if (var == 10)
 						return defaultCloseDialog(env, 10, 11); // 11
+			default:
+				break;
 			}
 		}
 		else if (targetId == 203786) {
@@ -152,6 +156,8 @@ public class _10022SupportTheInggisonOutpost extends QuestHandler {
 				case STEP_TO_9:
 					if (var == 8)
 						return defaultCloseDialog(env, 8, 9); // 9
+			default:
+				break;
 			}
 		}
 		else if (targetId == 204656) {
@@ -162,6 +168,8 @@ public class _10022SupportTheInggisonOutpost extends QuestHandler {
 				case STEP_TO_6:
 					if (var == 5)
 						return defaultCloseDialog(env, 5, 6); // 6
+			default:
+				break;
 			}
 		}
 		else if (targetId == 798176) {
@@ -172,6 +180,8 @@ public class _10022SupportTheInggisonOutpost extends QuestHandler {
 				case STEP_TO_7:
 					if (var == 6)
 						return defaultCloseDialog(env, 6, 7); // 7
+			default:
+				break;
 			}
 		}
 		else if (targetId == 700601) {

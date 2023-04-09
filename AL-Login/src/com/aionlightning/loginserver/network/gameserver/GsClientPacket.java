@@ -18,7 +18,7 @@ package com.aionlightning.loginserver.network.gameserver;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import com.aionlightning.commons.network.packet.BaseClientPacket;
+import com.aionemu.commons.network.packet.BaseClientPacket;
 
 /**
  * Base class for every GameServer -> LS Client Packet

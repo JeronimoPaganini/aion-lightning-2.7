@@ -90,6 +90,8 @@ public class _1099AnImportantChoice extends QuestHandler {
 								return false;
 							return defaultCloseDialog(env, 0, 1); // 1
 						}
+					default:
+						break;
 					}
 					break;
 				}
@@ -114,6 +116,8 @@ public class _1099AnImportantChoice extends QuestHandler {
 							QuestService.addNewSpawn(310010000, player.getInstanceId(), 700552, 183f, 295f, 296f, (byte) 0);
 							return defaultCloseDialog(env, 1, 2, 182206058, 1, 182206066, 1); // 2
 						}
+					default:
+						break;
 					}
 					break;
 				}
@@ -141,6 +145,8 @@ public class _1099AnImportantChoice extends QuestHandler {
 							reward = 1;
 							return defaultCloseDialog(env, 54, 54, true, false); // reward
 						}
+					default:
+						break;
 					}
 				}
 			}

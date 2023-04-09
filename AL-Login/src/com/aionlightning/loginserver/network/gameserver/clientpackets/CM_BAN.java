@@ -18,7 +18,7 @@ package com.aionlightning.loginserver.network.gameserver.clientpackets;
 
 import java.sql.Timestamp;
 
-import com.aionlightning.commons.database.dao.DAOManager;
+import com.aionemu.commons.database.dao.DAOManager;
 import com.aionlightning.loginserver.GameServerInfo;
 import com.aionlightning.loginserver.GameServerTable;
 import com.aionlightning.loginserver.controller.AccountController;

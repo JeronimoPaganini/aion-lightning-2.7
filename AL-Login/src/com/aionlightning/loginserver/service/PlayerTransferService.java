@@ -22,7 +22,7 @@ import javolution.util.FastList;
 import javolution.util.FastMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import com.aionlightning.commons.database.dao.DAOManager;
+import com.aionemu.commons.database.dao.DAOManager;
 import com.aionlightning.loginserver.GameServerInfo;
 import com.aionlightning.loginserver.GameServerTable;
 import com.aionlightning.loginserver.controller.AccountController;

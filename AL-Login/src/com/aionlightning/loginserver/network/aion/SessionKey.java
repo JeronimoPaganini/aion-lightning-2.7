@@ -16,7 +16,7 @@
  */
 package com.aionlightning.loginserver.network.aion;
 
-import com.aionlightning.commons.utils.Rnd;
+import com.aionemu.commons.utils.Rnd;
 import com.aionlightning.loginserver.model.Account;
 
 /**

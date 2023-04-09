@@ -16,7 +16,7 @@
  */
 package com.aionlightning.loginserver.network.ncrypt;
 
-import com.aionlightning.commons.utils.Rnd;
+import com.aionemu.commons.utils.Rnd;
 
 /**
  * Crypto engine for ecnrypting/decrypting packets, error handling and verifying

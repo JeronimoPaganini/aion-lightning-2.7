@@ -16,7 +16,7 @@
  */
 package mysql5;
 
-import com.aionlightning.commons.database.DatabaseFactory;
+import com.aionemu.commons.database.DatabaseFactory;
 import com.aionlightning.loginserver.dao.TaskFromDBDAO;
 import com.aionlightning.loginserver.taskmanager.handler.TaskFromDBHandler;
 import com.aionlightning.loginserver.taskmanager.handler.TaskFromDBHandlerHolder;

@@ -150,6 +150,8 @@ public class ItemCollecting extends QuestHandler {
 					case FINISH_DIALOG: {
 						return sendQuestSelectionDialog(env);
 					}
+				default:
+					break;
 				}
 			}
 			else if (targetId != 0

@@ -18,7 +18,7 @@ package com.aionlightning.loginserver.dao;
 
 import java.util.Map;
 
-import com.aionlightning.commons.database.dao.DAO;
+import com.aionemu.commons.database.dao.DAO;
 import com.aionlightning.loginserver.GameServerInfo;
 
 /**
